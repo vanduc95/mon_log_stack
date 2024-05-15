@@ -1,8 +1,0 @@
-[
-  {
-    "targets": ["localhost:9100"],
-    "labels": {
-      "os": "ubuntu-18.04"
-    }
-  }
-]

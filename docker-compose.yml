@@ -33,6 +33,10 @@ services:
       TZ: "Asia/Ho_Chi_Minh"
     labels:
       org.label-schema.group: "monitoring"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
 
   prometheus2:
     image: prom/prometheus:v2.52.0
@@ -55,6 +59,10 @@ services:
       TZ: "Asia/Ho_Chi_Minh"
     labels:
       org.label-schema.group: "monitoring"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
 
   alertmanager1:
     image: prom/alertmanager:v0.27.0
@@ -74,6 +82,10 @@ services:
       TZ: "Asia/Ho_Chi_Minh"
     labels:
       org.label-schema.group: "monitoring"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
 
   alertmanager2:
     image: prom/alertmanager:v0.27.0
@@ -93,6 +105,10 @@ services:
       TZ: "Asia/Ho_Chi_Minh"
     labels:
       org.label-schema.group: "monitoring"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
 
   nodeexporter:
     image: prom/node-exporter:v1.8.0
@@ -112,6 +128,10 @@ services:
       TZ: "Asia/Ho_Chi_Minh"
     labels:
       org.label-schema.group: "monitoring"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:v0.49.1
@@ -131,6 +151,10 @@ services:
       TZ: "Asia/Ho_Chi_Minh"
     labels:
       org.label-schema.group: "monitoring"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
 
   grafana:
     image: grafana/grafana:11.0.0
@@ -147,6 +171,10 @@ services:
     network_mode: host
     labels:
       org.label-schema.group: "monitoring"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.21

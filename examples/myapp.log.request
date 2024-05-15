@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://localhost:8080/myapp.log</string>
+	<string>http://localhost:8090/myapp.log</string>
 	<key>bodyString</key>
 	<string>json={"action":"login","userId":"5b07fbbb4e6b8"}</string>
 	<key>followRedirect</key>

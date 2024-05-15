@@ -281,5 +281,5 @@ Please note that RESTed is not strictly necessary as any other REST client appli
 If you have curl client installed on your system, you can generate sample data by running:
 
 ```bash
-curl -X POST -d 'json={"action":"login","userId":"5b07fbbb4e6b8"}' http://localhost:8080/myapp.log
+curl -X POST -d 'json={"action":"login","userId":"5b07fbbb4e6b8"}' http://localhost:8090/myapp.log
 ```
