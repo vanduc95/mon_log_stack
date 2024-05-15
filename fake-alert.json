@@ -1,17 +1,16 @@
 [
   {
     "annotations": {
-      "description": "[FAKE-ALERT]abcfasfafa",
+      "description": "[FAKE-ALERT]",
       "summary": "ESS node usage high"
     },
     "startsAt": "2020-11-09T14:00:23.163+07:00",
     "endsAt": "2020-12-04T16:20:00+07:00",
     "labels": {
       "alertname": "ess_node_usage_high",
-      "instance": "10.254.130.144",
+      "instance": "10.10.10.10",
       "group": "v_storage",
       "severity": "warning",
-      "owner": "anhnt425",
       "type": "server"
     }
   }
