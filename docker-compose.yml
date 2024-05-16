@@ -36,6 +36,7 @@ services:
     logging:
       driver: "fluentd"
       options:
+        fluentd-async: "true"
         fluentd-address: "localhost:24224"
 
   prometheus2:
@@ -62,6 +63,7 @@ services:
     logging:
       driver: "fluentd"
       options:
+        fluentd-async: "true"
         fluentd-address: "localhost:24224"
 
   alertmanager1:
@@ -85,6 +87,7 @@ services:
     logging:
       driver: "fluentd"
       options:
+        fluentd-async: "true"
         fluentd-address: "localhost:24224"
 
   alertmanager2:
@@ -108,6 +111,7 @@ services:
     logging:
       driver: "fluentd"
       options:
+        fluentd-async: "true"
         fluentd-address: "localhost:24224"
 
   nodeexporter:
@@ -131,6 +135,7 @@ services:
     logging:
       driver: "fluentd"
       options:
+        fluentd-async: "true"
         fluentd-address: "localhost:24224"
 
   cadvisor:
@@ -154,6 +159,7 @@ services:
     logging:
       driver: "fluentd"
       options:
+        fluentd-async: "true"
         fluentd-address: "localhost:24224"
 
   grafana:
@@ -174,13 +180,15 @@ services:
     logging:
       driver: "fluentd"
       options:
+        fluentd-async: "true"
         fluentd-address: "localhost:24224"
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.21
     container_name: elasticsearch
     environment:
-      discovery.type: single-node
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
     network_mode: host
 
   fluentd:
