@@ -13,7 +13,7 @@ services:
   #   network_mode: host
 
   prometheus1:
-    image: prom/prometheus:v2.52.0
+    image: prom/prometheus:v3.4.1
     container_name: prometheus1
     volumes:
       - ./prometheus1/:/etc/prometheus/
@@ -40,7 +40,7 @@ services:
         fluentd-address: "localhost:24224"
 
   prometheus2:
-    image: prom/prometheus:v2.52.0
+    image: prom/prometheus:v3.4.1
     container_name: prometheus2
     volumes:
       - ./prometheus2/:/etc/prometheus/
@@ -67,7 +67,7 @@ services:
         fluentd-address: "localhost:24224"
 
   alertmanager1:
-    image: prom/alertmanager:v0.27.0
+    image: prom/alertmanager:v0.28.1
     container_name: alertmanager1
     volumes:
       - ./alertmanager/:/etc/alertmanager/
@@ -91,7 +91,7 @@ services:
         fluentd-address: "localhost:24224"
 
   alertmanager2:
-    image: prom/alertmanager:v0.27.0
+    image: prom/alertmanager:v0.28.1
     container_name: alertmanager2
     volumes:
       - ./alertmanager/:/etc/alertmanager/
@@ -163,7 +163,7 @@ services:
         fluentd-address: "localhost:24224"
 
   grafana:
-    image: grafana/grafana:11.0.0
+    image: grafana/grafana:12.0.2
     container_name: grafana
     volumes:
       - grafana_data:/var/lib/grafana
